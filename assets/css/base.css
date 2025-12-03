@@ -51,7 +51,7 @@ html {
  */
 
 body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Alegreya Sans', script;
 	font-size: var(--text-base);  /* Uses our fluid typography variable */
 	line-height: 1.6;
 	color: var(--color-text);

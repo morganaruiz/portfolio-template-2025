@@ -12,6 +12,10 @@
 	padding: var(--space-md) 0;
 }
 
+.nav {
+	font-family: Alegreya Sans, sans-serif;
+}
+
 .nav-container {
 	display: flex;
 	justify-content: space-between;
