@@ -16,6 +16,7 @@
 	font-weight: 700;
 	margin-bottom: var(--space-xl);
 	text-align: center;
+	font-family: 'Pinyon Script', script;
 }
 
 /* --------------------------------------------------------------------------
@@ -31,12 +32,19 @@
 	overflow: hidden;
 }
 
+.hero-title {
+	font-size: var(--text-4xl);
+	font-weight: 700;
+	margin-bottom: var(--space-2xl);
+	text-align: center;
+	font-family: 'Pinyon Script', script;
+}
 .hero-bg {
 	position: absolute;
 	inset: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(/assets/images/geisha_con_tigres.jpeg);
+	background-image: url(/assets/images/geisha_con_tigres.svg);
 	z-index: -1;
 }
 

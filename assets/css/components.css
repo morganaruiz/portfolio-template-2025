@@ -13,9 +13,22 @@
   	align-items: center;
   	max-width: 600px;
   	margin: 2rem auto;
-  	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-	font-family: Alegreya Sans, sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
 
+	/* ¡LA MAGIA DEL GLASSMORPHISM! */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+
+ 	/* Borde sutil añade definición */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+	/* Esquinas redondeadas modernas */
+  border-radius: 20px;
+
+  /* Profundidad con sombra interna y externa */
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
 .btn:hover,
@@ -26,13 +39,15 @@
 .btn-text:hover,
 .btn-text:focus {
 	color: var(--color-text-hover);
+	 backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
 }
 
 /* --------------------------------------------------------------------------
    7. About Section
    -------------------------------------------------------------------------- */
 .about {
-	background: var(--color-bg-alt);
+background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 }
 
 .about-grid {
@@ -46,10 +61,18 @@
 		align-items: start;
 	}
 }
-
+.about-title {
+	font-size: var(--text-3xl);
+	font-weight: 700;
+	margin-bottom: var(--space-xl);
+	text-align: center;
+	font-family: 'Pinyon Script', script;
+	color: var(--color-bg-alt-2)
+}
 .about-text p {
 	margin-bottom: var(--space-md);
 	color: var(--color-text-muted);
+	font-family: 'Alegreya Sans', sans-serif;
 }
 
 .skills-grid {
@@ -59,10 +82,25 @@
 }
 
 .skill-card {
-	background: var(--color-bg);
+	background: rgba(255, 255, 255, 0.1);
 	padding: var(--space-md);
 	border-radius: 12px;
 	text-align: center;
+	backdrop-filter: blur(16px) saturate(180%);
+  	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* ¡LA MAGIA DEL GLASSMORPHISM! */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  /* Borde sutil añade definición */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+	/* Esquinas redondeadas modernas */
+  border-radius: 12px;
+
+  /* Profundidad con sombra interna y externa */
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
 .skill-icon {
@@ -74,6 +112,7 @@
 .skill-card h3 {
 	font-size: var(--text-sm);
 	margin-bottom: var(--space-sm);
+	font-family: 'Alegreya Sans', sans-serif;
 }
 
 .skill-bar {
