@@ -73,6 +73,7 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 	margin-bottom: var(--space-md);
 	color: var(--color-text-muted);
 	font-family: 'Alegreya Sans', sans-serif;
+	padding-top: 40px;
 }
 
 .skills-grid {

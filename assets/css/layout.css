@@ -77,7 +77,12 @@
 		 * - both — applies styles before and after animation
 		 */
 		animation: parallaxShift linear both;
-
+		background-image: url(/assets/images/geisha.png), url(/assets/images/solo_tigres.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:
+    	center,
+		center;
 		/*
 		 * SCROLL TIMELINE
 		 *
@@ -124,6 +129,7 @@
 @supports not (animation-timeline: scroll()) {
 	.parallax-bg {
 		background-attachment: fixed;  /* Classic parallax technique */
+
 	}
 }
 
