@@ -52,13 +52,12 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 
 .about-grid {
 	display: grid;
-	gap: var(--space-xl);
+	gap: var(--space-l);
 }
 
 @media (min-width: 768px) {
 	.about-grid {
-		grid-template-columns: 1fr 1fr;
-		align-items: start;
+		grid-template-columns: 1fr; /* SOLO 1 COLUMNA */
 	}
 }
 .about-title {
@@ -73,7 +72,39 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 	margin-bottom: var(--space-md);
 	color: var(--color-text-muted);
 	font-family: 'Alegreya Sans', sans-serif;
-	padding-top: 40px;
+	padding-top: 30px;
+	color: var(--color-bg-alt-2)
+}
+
+/* Carrusel contenedor */
+.skills-carousel {
+  width: 100%;
+   display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+/* Pista móvil */
+.skills-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scrollCarousel 20s linear infinite;
+}
+
+/* Animación infinita */
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.skills-track::after {
+  content: "";
+  display: block;
+  width: 100%;
 }
 
 .skills-grid {
@@ -85,13 +116,17 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 .skill-card {
 	background: rgba(255, 255, 255, 0.1);
 	padding: var(--space-md);
+	width: 240px;
+	height: 220px;
 	border-radius: 12px;
 	text-align: center;
 	backdrop-filter: blur(16px) saturate(180%);
   	border: 1px solid rgba(255, 255, 255, 0.3);
+
 	/* ¡LA MAGIA DEL GLASSMORPHISM! */
   backdrop-filter: blur(12px) saturate(150%);
   -webkit-backdrop-filter: blur(12px) saturate(150%);
+
   /* Borde sutil añade definición */
   border: 1px solid rgba(255, 255, 255, 0.4);
 
@@ -125,7 +160,7 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 
 .skill-fill {
 	height: 100%;
-	width: 0;
+	width: 95%;
 	background: var(--color-accent);
 	border-radius: 3px;
 	transition: width 1s var(--ease-out) 0.3s;
