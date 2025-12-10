@@ -47,7 +47,20 @@
    7. About Section
    -------------------------------------------------------------------------- */
 .about {
-background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
+  min-height: 600px;
+  padding: 4rem 0;
+
+  background-image:
+     url(/assets/images/geisha_tatuada.png), linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
+    
+  /* Fondo degradado siempre cubre el área */
+  background-size: contain, cover;
+
+  /* La geisha a la derecha, centrada verticalmente */
+  background-position: right center, center;
+
+  /* Evitar que se repitan */
+  background-repeat: no-repeat, no-repeat;
 }
 
 .about-grid {
@@ -79,9 +92,11 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 /* Carrusel contenedor */
 .skills-carousel {
   width: 100%;
-   display: flex;
+  display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  overflow: hidden;
+
 }
 
 /* Pista móvil */
@@ -92,19 +107,13 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
   animation: scrollCarousel 20s linear infinite;
 }
 
-/* Animación infinita */
-@keyframes scrollCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.skills-carousel:hover .skills-track {
+  animation-play-state: paused;
 }
-.skills-track::after {
-  content: "";
-  display: block;
-  width: 100%;
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50%)); }
 }
 
 .skills-grid {
@@ -118,6 +127,7 @@ background: linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
 	padding: var(--space-md);
 	width: 240px;
 	height: 220px;
+	flex: 0 0 240px;
 	border-radius: 12px;
 	text-align: center;
 	backdrop-filter: blur(16px) saturate(180%);
