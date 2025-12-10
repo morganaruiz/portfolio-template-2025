@@ -85,7 +85,6 @@
 	margin-bottom: var(--space-md);
 	color: var(--color-text-muted);
 	font-family: 'Alegreya Sans', sans-serif;
-	padding-top: 30px;
 	color: var(--color-bg-alt-2)
 }
 
@@ -96,7 +95,6 @@
   flex-direction: column;
   margin-top: 2rem;
   overflow: hidden;
-
 }
 
 /* Pista móvil */
@@ -104,11 +102,8 @@
   display: flex;
   gap: 2rem;
   width: max-content;
+  margin-bottom: 20px;
   animation: scrollCarousel 20s linear infinite;
-}
-
-.skills-carousel:hover .skills-track {
-  animation-play-state: paused;
 }
 
 @keyframes scrollCarousel {
@@ -126,7 +121,7 @@
 	background: rgba(255, 255, 255, 0.1);
 	padding: var(--space-md);
 	width: 240px;
-	height: 220px;
+	height: 140px;
 	flex: 0 0 240px;
 	border-radius: 12px;
 	text-align: center;
@@ -145,7 +140,7 @@
 
   /* Profundidad con sombra interna y externa */
   box-shadow:
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 8px 8px 0 rgba(31, 38, 135, 0.37),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -186,7 +181,7 @@
    -------------------------------------------------------------------------- */
 .projects-grid {
 	display: grid;
-	gap: var(--space-lg);
+	gap: var(--space-lg)
 }
 
 @media (min-width: 640px) {
@@ -270,6 +265,7 @@
 	font-size: var(--text-lg);
 	color: var(--color-text-muted);
 	margin-bottom: var(--space-lg);
+	font-family: 'Alegreya Sans', sans-serif;
 }
 
 .social-links {
@@ -277,6 +273,7 @@
 	justify-content: center;
 	gap: var(--space-lg);
 	margin-top: var(--space-lg);
+	font-family: 'Alegreya Sans', sans-serif;
 }
 
 .social-links a {
@@ -296,6 +293,7 @@
 	text-align: center;
 	color: var(--color-text-muted);
 	font-size: var(--text-sm);
+	font-family: 'Alegreya Sans', sans-serif;
 }
 
 .footer .container {
