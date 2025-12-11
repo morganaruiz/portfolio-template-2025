@@ -19,6 +19,21 @@
 	font-family: 'Pinyon Script', script;
 }
 
+.section-projects {
+	padding: var(--space-2xl) 0;
+	background-image: url(/assets/images/法金剛院.jpg);
+	min-height: 1200px;
+	width: auto;
+	margin-inline: auto;
+
+    
+  background-size: cover;
+
+  background-position: center;
+
+  /* Evitar que se repita */
+  background-repeat: repeat;
+}
 /* --------------------------------------------------------------------------
    5. Hero Section
    -------------------------------------------------------------------------- */

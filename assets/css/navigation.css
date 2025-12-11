@@ -46,5 +46,5 @@
 
 .nav-links a:hover,
 .nav-links a:focus {
-	color: var(--color-accent);
+	color: var(--color-bg-alt-2);
 }
