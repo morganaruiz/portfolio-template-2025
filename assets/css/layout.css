@@ -20,19 +20,22 @@
 }
 
 .section-projects {
-	padding: var(--space-2xl) 0;
-	background-image: url(/assets/images/法金剛院.jpg);
-	min-height: 1200px;
-	width: auto;
-	margin-inline: auto;
+    padding: var(--space-2xl) 0;
+    background-image:  url(/assets/images/geisha_tatuada.png), linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
+    /* Fondo degradado siempre cubre el área */
+  /* Hacer la imagen de la geisha más pequeña: primer valor (30% auto) controla el tamaño de la imagen, el segundo mantiene el degradado en cover */
+  background-size: 30% auto, cover;
 
-    
-  background-size: cover;
 
-  background-position: center;
+  /* La geisha a la derecha, centrada verticalmente */
+  background-position: right bottom, center;
 
-  /* Evitar que se repita */
-  background-repeat: repeat;
+
+  /* Evitar que se repitan */
+  background-repeat: no-repeat, no-repeat;
+    min-height: 1000px;
+    width: auto;
+    margin-inline: auto;
 }
 /* --------------------------------------------------------------------------
    5. Hero Section
