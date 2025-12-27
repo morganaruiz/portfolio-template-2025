@@ -21,8 +21,8 @@
 
 .section-projects {
   padding: var(--space-2xl) 0;
-  background-image: url(/assets/images/geisha_tatuada.png),
-    linear-gradient(135deg, #a7cdf4 0%, #f0dcf4 50%, #d9cfed 100%);
+  background-image: url(/assets/images/geisha_tatuada.png);
+  background-color: #e0e0e0;
   /* Fondo degradado siempre cubre el área */
   /* Hacer la imagen de la geisha más pequeña: primer valor (30% auto) controla el tamaño de la imagen, el segundo mantiene el degradado en cover */
   background-size: 30% auto, cover;
@@ -96,7 +96,7 @@
     animation: parallaxShift linear both;
     background-image: url(/assets/images/solo_tigres.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     /*
 		 * SCROLL TIMELINE
