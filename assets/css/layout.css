@@ -94,7 +94,7 @@
 		 * - both — applies styles before and after animation
 		 */
     animation: parallaxShift linear both;
-    background-image: url(/assets/images/solo_tigres.png);
+    background-image: url(/assets/images/solo_tigres.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
