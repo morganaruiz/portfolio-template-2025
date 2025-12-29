@@ -279,7 +279,6 @@ cambie el orden de carga en producción.*/
 
 .project-content h3 {
   font-size: var(--text-lg);
-  margin-bottom: var(--space-xs);
   font-family: "Alegreya Sans", sans-serif;
   color: var(--color-text);
 }
@@ -306,6 +305,12 @@ cambie el orden de carga en producción.*/
   border-radius: 4px;
 }
 
+.view-project {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: var(--text-xs);
+  color: var(--color-accent-hover);
+}
+
 .modal {
   /* Hidden by default */
   position: fixed;
@@ -327,23 +332,32 @@ cambie el orden de carga en producción.*/
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
-  display: grid;
+  display: columns;
   place-items: center;
   padding: 1rem;
   font-family: "Alegreya Sans", sans-serif;
+  text-align: justify;
+  font-size: var(--text-xs);
+  border-radius: 12px;
+  align-content: center;
 }
 
 .modal__panel {
-  background: #1a1a1a;
+  box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
   max-height: 90vh;
   overflow: auto;
   box-shadow: var(--shadow-lg);
   transform: scale(0.95) translateY(20px);
   transition: transform var(--transition-base);
+  border-radius: 12px;
+  align-content: center;
 
   /* Animation */
   transform: scale(0.95) translateY(20px);
@@ -360,12 +374,15 @@ cambie el orden de carga en producción.*/
   align-items: center;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--color-accent-hover);
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Pinyon Script", script;
 }
 
 .modal__title {
   font-size: 1.25rem;
   font-weight: 700;
+  border-radius: 4px;
+  margin: 0; /* separación controlada por gap */
+  color: var(--color-text);
 }
 
 .modal__close {
@@ -376,7 +393,7 @@ cambie el orden de carga en producción.*/
   height: 2.5rem;
   border-radius: 12px;
   background: transparent;
-  border: 1px solid var(--color-accent-hover);
+  border: 1px solid var(--color-bg-alt-2);
   color: var(--color-text);
   text-decoration: none;
   font-size: 1.25rem;
@@ -390,18 +407,26 @@ cambie el orden de carga en producción.*/
 }
 
 .modal__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  min-height: fit-content;
   overflow: hidden;
-  width: 100%;
-  max-height: 40vh;
-  border-radius: 12px;
 }
 
 .modal__image img {
-  width: 100%;
-  height: auto;
   display: block;
-  object-fit: cover;
-  transition: transform 0.5s;
+  width: cover;
+  height: cover;
+  max-width: 90%; /* no salga del ancho del modal /
+max-height: 60vh; / evita que sobrepase la altura visible del modal /
+object-fit: contain; / muestra la imagen completa sin recortar */
+  object-position: center;
+  margin: 0 auto;
+  border-radius: 12px;
+  /*Si tienes object-fit: cover o width:100%; height:100% quítalos: recortan la imagen.
+Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-height del img (ej. 50vh) para que quepa.*/
 }
 
 .modal__body {
@@ -409,7 +434,7 @@ cambie el orden de carga en producción.*/
 }
 
 .modal__description {
-  color: var(--color-text-muted);
+  color: var(--color-bg-alt-2);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -418,15 +443,20 @@ cambie el orden de carga en producción.*/
   display: flex;
   gap: var(--space-xs);
   flex-wrap: wrap;
-  font-family: "Alegreya Sans", sans-serif;
-  color: var(--color-accent);
+  padding: 0; /* quitar fondo/padding del contenedor */
+  background: transparent; /* evitar un único rectángulo */
+  align-items: center;
 }
 
-.modal__tag {
+.modal__tag,
+.modal__tags span {
+  display: inline-block;
   font-size: var(--text-xs);
   padding: 4px 8px;
-  background: var(--color-accent-hover);
+  background: var(--color-accent-hover, #7c3aed); /* morado (fallback) */
+  color: var(--color-bg, #ffffff); /* texto claro */
   border-radius: 4px;
+  margin: 0; /* separación controlada por gap */
 }
 
 .modal__actions {
