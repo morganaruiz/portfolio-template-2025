@@ -57,7 +57,7 @@
    7. About Section
    -------------------------------------------------------------------------- */
 .about {
-  min-height: 800px;
+  height: 650px;
   padding: 4rem 0;
 
   background-image: url(/assets/images/geisha.png);
@@ -72,7 +72,7 @@
     100% + 60px
   ); /* la mueves 40px más a la derecha */
 
-  background-color: white;
+  background-color: #e0e0e0;
 }
 
 .about-grid {
@@ -424,7 +424,7 @@ max-height: 60vh; / evita que sobrepase la altura visible del modal /
 object-fit: contain; / muestra la imagen completa sin recortar */
   object-position: center;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: 10px;
   /*Si tienes object-fit: cover o width:100%; height:100% quítalos: recortan la imagen.
 Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-height del img (ej. 50vh) para que quepa.*/
 }
@@ -437,6 +437,14 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
   color: var(--color-bg-alt-2);
   margin-bottom: 1.5rem;
   line-height: 1.7;
+}
+
+/* Subtítulos dentro de la modal (ej. Brand concept, Naming, Logo) */
+.modal-subtitle {
+  display: block; /* fuerza nueva línea */
+  text-decoration: underline;
+  margin: 1rem 0 0; /* separa del texto anterior y del contenido siguiente */
+  font-weight: 600;
 }
 
 .modal__tags {
