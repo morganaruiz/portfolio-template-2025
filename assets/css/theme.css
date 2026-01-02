@@ -101,8 +101,8 @@
   --color-bg: #e0e0e0; /* Near-black background */
   --color-bg-alt: #1a1a1a; /* Slightly lighter for depth/sections */
   --color-bg-alt-2: #6c21a0;
-  --color-text: #83d9dc; /* Off-white for readability (not pure white) */
-  --color-text-muted: #a0a0a0; /* Subdued text for secondary content */
+  --color-text: #0bc9cd; /* Off-white for readability (not pure white) */
+  --color-text-muted: #323232; /* Subdued text for secondary content */
   --color-text-hover: white; /* White for hover states */
   --color-accent: #c5f0ea; /* Indigo — primary brand color */
   --color-accent-hover: #ad84c9; /* Lighter indigo for hover states */

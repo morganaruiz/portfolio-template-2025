@@ -180,7 +180,7 @@
 .skill-fill {
   height: 100%;
   width: var(--fill, 95%);
-  background: var(--color-accent, #c5f0ea);
+  background: var(--color-text);
   border-radius: 3px;
   transition: width 1s var(--ease-out) 0.3s;
   /*ahora width: var(--fill, 95%); 
@@ -480,15 +480,31 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
    9. Contact Section
    -------------------------------------------------------------------------- */
 .contact {
-  background: var(--color-bg-alt);
+  background-image: url(/assets/images/2gatos.PNG);
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+  background-position: center;
+  background-size: cover;
+
+  /* Tamaño fijo o pequeño para que NO crezca. Prueba con 200px. */
+  background-size: 900px auto;
+  align-content: center;
   text-align: center;
 }
 
+.contact-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-l);
+  text-align: center;
+  font-family: "Pinyon Script", script;
+}
 .contact-content p {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
   font-family: "Alegreya Sans", sans-serif;
+  line-height: 25px;
 }
 
 .social-links {
@@ -505,7 +521,7 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
 }
 
 .social-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 /* --------------------------------------------------------------------------
@@ -514,7 +530,7 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
 .footer {
   padding: var(--space-lg) 0;
   text-align: center;
-  color: var(--color-text-muted);
+  color: #e0e0e0;
   font-size: var(--text-sm);
   font-family: "Alegreya Sans", sans-serif;
 }
@@ -531,13 +547,13 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-alt);
+  background: var(--color-text);
   border-radius: 50%;
   transition: background 0.3s, transform 0.3s;
 }
 
 .back-to-top:hover {
-  background: var(--color-accent);
+  background: var(--color-bg-alt-2);
   transform: translateY(-3px);
 }
 
