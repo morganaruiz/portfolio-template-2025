@@ -322,7 +322,7 @@ function initActiveNav() {
         navLinks.forEach((link) => {
           link.style.color =
             link.getAttribute("href") === `#${id}`
-              ? "var(--color-accent)" // Highlighted color
+              ? "var(--color-bg-alt-2)" // Highlighted color
               : ""; // Reset to default (inherits from CSS)
         });
       }

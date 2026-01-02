@@ -84,9 +84,8 @@
         <div class="hero-bg parallax-bg"></div>
         <div class="hero-content">
           <h1 class="hero-title animate-on-scroll">
-            Nina's Portfolio!
-            <br />
-            🀥
+            Nina's Portfolio! <br />
+            <span style="color: darkred">🀥</span>
           </h1>
           <p class="hero-subtitle animate-on-scroll">
             Graphic Designer & Illustrator
@@ -216,13 +215,13 @@
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/lirienna.jpg"
+                  src="assets/images/lirienna.png"
                   alt="LIRIENNA"
                   loading="lazy"
                 />
               </div>
               <div class="project-content">
-                <h3>LIRIENNA</h3>
+                <h3>Lirienna</h3>
                 <p>Branding</p>
                 <div class="project-tags">
                   <span>Photoshop</span><span>Illustrator</span
@@ -237,7 +236,7 @@
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/tipografia.jpg"
+                  src="assets/images/tipografia.png"
                   alt="Silbicortipartico"
                   loading="lazy"
                 />
@@ -257,7 +256,7 @@
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/sofia.jpg"
+                  src="assets/images/sofia.png"
                   alt="Sofia Coppola Fanzine"
                   loading="lazy"
                 />
@@ -279,7 +278,7 @@
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/carteles.jpg"
+                  src="assets/images/carteles.png"
                   alt="Poster work"
                   loading="lazy"
                 />
@@ -290,12 +289,16 @@
                 <div class="project-tags">
                   <span>Photoshop</span><span>Illustrator</span>
                 </div>
+                <!-- Trigger -->
+                <a class="view-project" href="#project-modal-poster"
+                  >View Project</a
+                >
               </div>
             </article>
             <article class="project-card">
               <div class="project-image">
                 <img
-                  src="assets/images/fotografia.jpg"
+                  src="assets/images/fotografia.png"
                   alt="Photography work"
                   loading="lazy"
                 />
@@ -306,6 +309,10 @@
                 <div class="project-tags">
                   <span>Canon Camera</span>
                 </div>
+                <!-- Trigger -->
+                <a class="view-project" href="#project-modal-photography"
+                  >View Project</a
+                >
               </div>
             </article>
           </div>
@@ -562,6 +569,106 @@
             <div class="modal__tags">
               <span>Photoshop</span>
               <span>Indesign</span>
+            </div>
+            <div class="modal__actions">
+              <a href="#" class="btn">Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Poster Project -->
+    <div id="project-modal-poster" class="modal">
+      <div class="modal__backdrop">
+        <div
+          class="modal__panel"
+          role="dialog"
+          aria-labelledby="project-modal-sofia-title"
+        >
+          <header class="modal__header">
+            <h3 id="project-modal-poster-title" class="modal__title">
+              Poster Work - Graphic design
+            </h3>
+            <a href="#" class="modal__close" aria-label="Close modal">×</a>
+          </header>
+
+          <div class="modal__image">
+            <img
+              src="/assets/images/carteleshorizontal.png"
+              alt="Poster Work 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal__image">
+            <img
+              src="/assets/images/carteleshorizontal2.png"
+              alt="Poster Work 2"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal__body">
+            <p class="modal__description">
+              <span class="modal-subtitle">Project description</span>
+              These are some of the posters I have worked on in my free time
+              between 2024 and 2025. Every time I decide to make a poster, I
+              challenge myself by trying to get out of my comfort zone and
+              practice different effects, new grids or play with typography,
+              composition and colors. I usually make posters about music bands
+              or movies that I like.
+            </p>
+            <div class="modal__tags">
+              <span>Photoshop</span>
+              <span>Illustrator</span>
+            </div>
+            <div class="modal__actions">
+              <a href="#" class="btn">Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Photography Project -->
+    <div id="project-modal-photography" class="modal">
+      <div class="modal__backdrop">
+        <div
+          class="modal__panel"
+          role="dialog"
+          aria-labelledby="project-modal-photography-title"
+        >
+          <header class="modal__header">
+            <h3 id="project-modal-photography-title" class="modal__title">
+              Photography Work - Photography
+            </h3>
+            <a href="#" class="modal__close" aria-label="Close modal">×</a>
+          </header>
+
+          <div class="modal__image">
+            <img
+              src="/assets/images/fotoshorizontal2.png"
+              alt="Poster Work 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal__image">
+            <img
+              src="/assets/images/fotoshorizontal.png"
+              alt="Poster Work 2"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal__body">
+            <p class="modal__description">
+              <span class="modal-subtitle">Project description</span>
+              This section includes a series of photographs that I took for
+              class projects. I have done all kinds of portraits, which in some
+              the people photographed were posing, and others were totally
+              spontaneous, without knowing that I was photographing them. With
+              these photographs I wanted to capture the essence of the person,
+              making a simple image tell a deep story behind it and make the
+              viewer reflect. These photographs were taken from 2022 to 2024.
+            </p>
+            <div class="modal__tags">
+              <span>Canon Camera</span>
             </div>
             <div class="modal__actions">
               <a href="#" class="btn">Close</a>
