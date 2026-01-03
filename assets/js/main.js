@@ -352,6 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
   initSmoothScroll();
   initActiveNav();
+  initTheme();
 
   console.log("🚀 Grade 1 Demo: Vanilla scroll animations initialized");
 });

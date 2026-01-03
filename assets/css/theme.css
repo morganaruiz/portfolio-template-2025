@@ -100,13 +100,23 @@
 	 */
   --color-bg: #e0e0e0; /* Near-black background */
   --color-bg-alt: #1a1a1a; /* Slightly lighter for depth/sections */
-  --color-bg-alt-2: #6c21a0;
-  --color-text: #0bc9cd; /* Off-white for readability (not pure white) */
+  --color-bg-alt-2: #771011;
+  --color-text: #771011; /* Off-white for readability (not pure white) */
   --color-text-muted: #323232; /* Subdued text for secondary content */
   --color-text-hover: white; /* White for hover states */
-  --color-accent: #c5f0ea; /* Indigo — primary brand color */
-  --color-accent-hover: #ad84c9; /* Lighter indigo for hover states */
+  --color-accent-hover: #cdbfb2; /* Lighter indigo for hover states */
+}
 
+:root[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-bg-alt: #2d2d2d;
+  --color-bg-alt-2: #6c21a0;
+  --color-text: #0bc9cd;
+  --color-text-muted: #adb5bd;
+  --color-accent-hover: #ad84c9;
+}
+/*HAY QUE PONER ROOT PARA QUE SE APLIQUE EL TEMA DARK EN TODOS LOS SITIOS*/
+:root {
   /*
 	 * ANIMATION TOKENS
 	 *

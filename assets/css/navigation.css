@@ -2,16 +2,16 @@
    4. Navigation
    -------------------------------------------------------------------------- */
 .nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 100;
-	padding: var(--space-md) 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-md) 0;
 }
 
 .nav {
-	font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 .nav-container {
@@ -23,28 +23,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: min(90%,1200px);
+  max-width: min(90%, 1200px);
   margin-inline: auto;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
 }
 
 .nav-logo {
-	font-size: var(--text-xl);
-	font-weight: 700;
+  font-size: var(--text-xl);
+  font-weight: 700;
 }
 
 .nav-links {
-	display: flex;
-	gap: var(--space-lg);
-	list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
 }
 
 .nav-links a {
-	color: var(--color-text-muted);
-	transition: color 0.3s;
+  color: var(--color-text-muted);
+  transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-	color: var(--color-bg-alt-2);
+  color: var(--color-bg-alt-2);
 }
