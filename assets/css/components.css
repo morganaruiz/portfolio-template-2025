@@ -103,9 +103,10 @@
     background-size: 160px auto;
     background-position: top right;
     background-position-x: calc(100% + 90px);
-    background-position-y: calc(100% - 500px);
-    height: auto;
+    background-position-y: calc(100% - 400px);
+    height: 600px;
     padding: 2rem 0;
+    margin-bottom: none;
   }
 }
 
@@ -114,9 +115,10 @@
     background-size: 300px auto;
     background-position: top right;
     background-position-x: calc(100% + 90px);
-    background-position-y: calc(100% - 500px);
-    height: auto;
+    background-position-y: calc(100% - 400px);
+    height: 600px;
     padding: 3rem 0;
+    margin-bottom: none;
   }
 }
 
@@ -273,7 +275,6 @@ cambie el orden de carga en producción.*/
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 .projects-title {
   font-size: var(--text-3xl);

@@ -267,11 +267,6 @@
   .section {
     padding: var(--space-lg) 0;
   }
-
-  .scroll-indicator {
-    bottom: var(--space-lg);
-    font-size: var(--text-xs);
-  }
 }
 
 /* Tablet */
@@ -306,6 +301,11 @@
 
   .hero-subtitle {
     font-size: var(--text-sm);
+  }
+
+  .section-projects {
+    margin-top: none;
+    height: 2250px;
   }
   /* Adjust .about for tablet: slightly smaller geisha and reposition */
 }
