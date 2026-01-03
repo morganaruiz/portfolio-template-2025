@@ -347,7 +347,6 @@ cambie el orden de carga en producción.*/
   font-family: "Alegreya Sans", sans-serif;
   text-align: justify;
   font-size: var(--text-xs);
-  border-radius: 12px;
   align-content: center;
 }
 
@@ -442,7 +441,7 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
 }
 
 .modal__description {
-  color: var(--color-bg-alt-2);
+  color: var(--color-bg-alt);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -453,6 +452,7 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
   text-decoration: underline;
   margin: 1rem 0 0; /* separa del texto anterior y del contenido siguiente */
   font-weight: 600;
+  color: var(--color-text);
 }
 
 .modal__tags {
@@ -469,8 +469,8 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
   display: inline-block;
   font-size: var(--text-xs);
   padding: 4px 8px;
-  background: var(--color-accent-hover, #7c3aed); /* morado (fallback) */
-  color: var(--color-bg, #ffffff); /* texto claro */
+  background: var(--color-accent-hover); /* morado (fallback) */
+  color: var(--color-accent); /* texto claro */
   border-radius: 4px;
   margin: 0; /* separación controlada por gap */
 }
