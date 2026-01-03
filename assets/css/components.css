@@ -40,7 +40,25 @@
   display: flex;
   justify-content: center;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .btn {
+    font-size: var(--text-xs);
+    width: 150px;
+    padding: 0.5rem 1rem;
+    line-height: 0.5rem;
+    border-radius: 10px;
+  }
+}
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn {
+    font-size: var(--text-xs);
+    width: 100px;
+    padding: 0.75rem 1.25rem;
+    line-height: 0.75rem;
+    border-radius: 15px;
+  }
+}
 /* Pressed/Inset Effect (when active) */
 .btn:active {
   /* Inset shadows reverse the effect */
@@ -77,6 +95,29 @@
   ); /* la mueves 40px más a la derecha */
   background-position-y: calc(100%); /* la mueves 40px más abajo */
   background-color: var(--color-bg);
+}
+
+/* Responsive overrides for .about to ensure geisha scales on small viewports */
+@media (min-width: 320px) and (max-width: 480px) {
+  .about {
+    background-size: 160px auto;
+    background-position: top right;
+    background-position-x: calc(100% + 90px);
+    background-position-y: calc(100% - 500px);
+    height: auto;
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .about {
+    background-size: 300px auto;
+    background-position: top right;
+    background-position-x: calc(100% + 90px);
+    background-position-y: calc(100% - 500px);
+    height: auto;
+    padding: 3rem 0;
+  }
 }
 
 .about-grid {
@@ -232,6 +273,7 @@ cambie el orden de carga en producción.*/
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
 .projects-title {
   font-size: var(--text-3xl);

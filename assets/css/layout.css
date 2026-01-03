@@ -165,7 +165,7 @@
 
 .hero-subtitle {
   font-size: var(--text-2xl);
-  color: var(--color-text-muted);
+  color: var(--color-bg-alt);
   margin-bottom: var(--space-lg);
   font-family: "Alegreya Sans", sans-serif;
 }
@@ -217,6 +217,97 @@
   60% {
     transform: translateY(5px);
   }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive breakpoints
+   - Mobile: 320px - 480px
+   - Tablet: 481px - 768px
+   -------------------------------------------------------------------------- */
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: min(92%, 720px);
+  }
+
+  .nav-container {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-logo {
+    font-size: var(--text-sm);
+  }
+
+  .nav-links {
+    gap: var(--space-xs);
+    font-size: var(--text-xs);
+  }
+
+  main {
+    padding-top: 72px; /* leave space for fixed nav */
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-title {
+    font-size: var(--text-2xl);
+  }
+
+  .hero-title-2 {
+    font-size: var(--text-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xs);
+  }
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .scroll-indicator {
+    bottom: var(--space-lg);
+    font-size: var(--text-xs);
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: min(92%, 720px);
+  }
+
+  .nav-container {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-logo {
+    font-size: var(--text-xl);
+  }
+
+  main {
+    padding-top: 84px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero-title-2 {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-sm);
+  }
+  /* Adjust .about for tablet: slightly smaller geisha and reposition */
 }
 /*He actualizado layout.css para que la flecha (.scroll-arrow) 
 se dibuje rotada en ::before y la animación mueva solo la 
