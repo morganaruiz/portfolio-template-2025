@@ -25,14 +25,14 @@
   background-color: var(--color-bg);
   /* Fondo degradado siempre cubre el área */
   /* Hacer la imagen de la geisha más pequeña: primer valor (30% auto) controla el tamaño de la imagen, el segundo mantiene el degradado en cover */
-  background-size: 30% auto, cover;
+  background-size: 30% auto, contain;
 
   /* La geisha a la derecha, centrada verticalmente */
   background-position: right bottom, center;
 
   /* Evitar que se repitan */
   background-repeat: no-repeat, no-repeat;
-  height: 1100px;
+  height: auto;
   width: auto;
   margin-inline: auto;
 }
