@@ -66,7 +66,23 @@
   z-index: -1;
   background-color: var(--color-bg);
 }
-
+.hero-bg-404 {
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/john-travolta.gif);
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-color: #fafcf9;
+  background-position: bottom left;
+}
+.hero-title-404 {
+  font-size: 150px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Pinyon Script", script;
+  display: inline-block;
+  margin-bottom: -0.3em;
+}
 /* --------------------------------------------------------------------------
    CSS SCROLL-DRIVEN ANIMATIONS (MODERN PARALLAX)
 
@@ -169,7 +185,17 @@
   margin-bottom: var(--space-lg);
   font-family: "Alegreya Sans", sans-serif;
 }
-
+.hero-subtitle-404 {
+  font-size: var(--text-3xl);
+  color: var(--color-bg-alt);
+  font-family: "Alegreya Sans", sans-serif;
+  margin-top: 0%;
+}
+.hero-p-404 {
+  font-size: var(--text-sm);
+  color: #323232;
+  font-family: "Alegreya Sans", sans-serif;
+}
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
