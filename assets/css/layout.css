@@ -21,7 +21,7 @@
 
 .section-projects {
   padding: var(--space-2xl) 0;
-  background-image: url(/assets/images/geisha_tatuada.png);
+  background-image: url("../images/geisha_tatuada.png");
   background-color: var(--color-bg);
   /* Fondo degradado siempre cubre el área */
   /* Hacer la imagen de la geisha más pequeña: primer valor (30% auto) controla el tamaño de la imagen, el segundo mantiene el degradado en cover */
@@ -62,7 +62,7 @@
   inset: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/assets/images/geisha_con_tigres.svg);
+  background-image: url("../images/geisha_con_tigres.svg");
   z-index: -1;
   background-color: var(--color-bg);
 }
@@ -96,7 +96,7 @@
 		 * - both — applies styles before and after animation
 		 */
     animation: parallaxShift linear both;
-    background-image: url(/assets/images/solo_tigres.PNG);
+    background-image: url("../images/solo_tigres.PNG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

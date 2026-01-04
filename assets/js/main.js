@@ -49,7 +49,17 @@
  *       - 0.1 = trigger when 10% is visible
  *       - 1.0 = trigger only when 100% visible
  *       - [0, 0.5, 1] = trigger at multiple thresholds
- */
+ 1. Animaciones con IntersectionObserver
+
+Este bloque controla cuándo los elementos aparecen animados al entrar en el viewport.
+Esto significa:
+
+root: null → el viewport del navegador es el área que se observa.
+
+rootMargin → adelanta el trigger 10% antes de que el elemento entre.
+
+threshold: 0.1 → 10% visible = ya dispara la animación.*/
+
 const observerOptions = {
   root: null, // Use the browser viewport
   rootMargin: "0px 0px -10% 0px", // Trigger 10% before fully visible
@@ -70,7 +80,14 @@ const observerOptions = {
  * - entry.intersectionRatio: number - how much is visible (0-1)
  * - entry.target: Element - the DOM element being observed
  * - entry.boundingClientRect: DOMRect - element's position/size
- */
+ 
+Cuando un elemento .animate-on-scroll entra al viewport → le pone .visible.
+
+Esto activa una animación o transición en CSS.
+
+unobserve() corta la observación para mejorar rendimiento.
+
+*/
 const revealOnScroll = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -90,7 +107,9 @@ const revealOnScroll = (entries, observer) => {
  *
  * Same pattern, but adds 'revealed' class to containers.
  * CSS handles the staggered animation of children via transition-delay.
- */
+Es lo mismo, pero para contenedores con animaciones escalonadas (tipo tarjetas que entran una a una).
+El CSS se encarga del delay. 
+*/
 const revealStaggered = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -106,6 +125,7 @@ const revealStaggered = (entries, observer) => {
  * We create two separate observers because they add different classes.
  * You could use one observer with logic to determine which class to add,
  * but separate observers are clearer and more maintainable.
+ * Dos observers para mantener claridad y separación de responsabilidad.
  */
 const singleObserver = new IntersectionObserver(
   revealOnScroll,
@@ -145,7 +165,22 @@ function initScrollAnimations() {
    * - iOS: Settings → Accessibility → Motion → Reduce Motion
    *
    * ⚠️ IMPORTANT: Always check this BEFORE initializing animations!
-   */
+  
+  Esta función inicializa todo lo relacionado con animaciones.
+
+Primero:
+
+Respeta prefers-reduced-motion
+Si el usuario no quiere animaciones:
+
+el.classList.add("visible");
+el.classList.add("revealed");
+return;
+
+
+Es un fallback elegante para accesibilidad.
+  
+  */
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -159,7 +194,21 @@ function initScrollAnimations() {
      *
      * This is NOT about removing features — it's about providing
      * an equivalent experience for users who need it.
-     */
+     
+    Si NO reduce motion:
+
+Entonces activa los observers:
+
+document.querySelectorAll(".animate-on-scroll").forEach(el => singleObserver.observe(el));
+document.querySelectorAll("[data-reveal-stagger]").forEach(el => staggerObserver.observe(el));
+
+
+Traducción:
+
+Todos los elementos con .animate-on-scroll se animarán individualmente.
+
+Todos con [data-reveal-stagger] se animarán en grupo.
+    */
     document.querySelectorAll(".animate-on-scroll").forEach((el) => {
       el.classList.add("visible");
     });
@@ -211,7 +260,24 @@ function initScrollAnimations() {
  * 3. Calculate target position accounting for fixed nav height
  * 4. Smoothly scroll to that position
  * 5. Update URL for bookmarking/sharing
- */
+ 
+Esta sección implementa el desplazamiento suave al hacer clic en enlaces internos (#seccion).
+
+El script:
+
+Detecta todos los <a href="#algo">
+
+Cancela el salto brusco
+
+Calcula posición final teniendo en cuenta la altura del menú fijo
+
+Usa window.scrollTo({ behavior: "smooth" })
+
+Cambia la URL con history.pushState
+
+Es decir:
+smooth scroll profesional, no el básico de CSS.
+*/
 function initSmoothScroll() {
   // Select all anchor links (href starts with "#")
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -296,7 +362,22 @@ function initSmoothScroll() {
  * - Shrink the detection area by 50% from top AND bottom
  * - This creates a narrow band in the middle of the viewport
  * - Only the section crossing this band is considered "active"
- */
+ 
+Esta parte recalca qué sección está activa en el menú mientras scrolleas.
+
+Observa todas las <section id="">
+
+Usa un rootMargin que crea una “zona caliente” en el centro de la pantalla.
+
+Cuando una sección entra en esa zona:
+
+Busca el link correspondiente del menú
+
+Lo pinta con un color específico
+
+Es UX pura:
+el usuario siempre sabe dónde está en la página.
+*/
 function initActiveNav() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-links a");
@@ -375,7 +456,10 @@ document.addEventListener("DOMContentLoaded", () => {
  * - In Vue: onUnmounted lifecycle hook
  *
  * For traditional multi-page sites, this isn't needed (page reload cleans up).
- */
+ 
+Esto es para React/Vue/etc:
+Si cambias de página sin recargar el sitio, hay que desconectar observers para evitar fugas de memoria.
+*/
 window.cleanupScrollObservers = () => {
   singleObserver.disconnect(); // Stop observing all elements
   staggerObserver.disconnect();

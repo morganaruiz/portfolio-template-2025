@@ -82,7 +82,7 @@
   height: 600px; /* ajusta altura al contenido */
   padding: 4rem 0;
 
-  background-image: url(/assets/images/geisha.png);
+  background-image: url("../images/geisha.png");
   background-repeat: no-repeat;
 
   /* Tamaño fijo o pequeño para que NO crezca. Prueba con 200px. */
@@ -106,7 +106,6 @@
     background-position-y: calc(100% - 370px);
     height: auto;
     padding: 2rem 0;
-    margin-bottom: none;
   }
 }
 
@@ -117,7 +116,6 @@
     background-position-x: calc(100% + 110px);
     background-position-y: calc(100% - 360px);
     padding: 3rem 0;
-    margin-bottom: none;
   }
 }
 @media (min-width: 769px) and(max-width: 1024px) {
@@ -128,7 +126,6 @@
     background-position-y: calc(100% - 230px);
     height: auto;
     padding: 3rem 0;
-    margin-bottom: none;
   }
 }
 .about-grid {
@@ -393,7 +390,7 @@ cambie el orden de carga en producción.*/
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
-  display: columns;
+  display: grid;
   place-items: center;
   padding: 1rem;
   font-family: "Alegreya Sans", sans-serif;
@@ -537,7 +534,7 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
    9. Contact Section
    -------------------------------------------------------------------------- */
 .contact {
-  background-image: url(/assets/images/2gatos.PNG);
+  background-image: url("../images/2gatos.PNG");
   background-repeat: no-repeat;
   background-color: var(--color-bg);
   background-position: center;
@@ -562,13 +559,12 @@ Si el .modal__panel tiene max-height: 90vh y mucho header/texto, reduce max-heig
     background-size: 600px auto;
     height: 400px;
     padding: 3rem 0;
-    margin-bottom: none;
   }
 }
 .contact-title {
   font-size: var(--text-3xl);
   font-weight: 700;
-  margin-bottom: var(--space-l);
+  margin-bottom: var(--space-lg);
   text-align: center;
   font-family: "Pinyon Script", script;
 }
