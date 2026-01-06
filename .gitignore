@@ -1,1 +1,19 @@
-1. .DS_Store
+# Archivos de sistema y configuraciones del IDE
+.DS_Store
+.vscode/
+
+# Dependencias
+node_modules/
+package-lock.json
+
+# Archivos compilados
+/dist/
+/build/
+
+# Variables de entorno
+.env
+
+# Credenciales y claves privadas
+*.key
+*.credentials
+*.pem

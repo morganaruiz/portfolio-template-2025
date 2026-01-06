@@ -433,7 +433,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
   initSmoothScroll();
   initActiveNav();
-  initTheme();
+  if (typeof initTheme === "function") {
+    initTheme();
+  } else {
+    console.warn("initTheme() not found; skipping theme initialization");
+  }
 
   console.log("🚀 Grade 1 Demo: Vanilla scroll animations initialized");
 });

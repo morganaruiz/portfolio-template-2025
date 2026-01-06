@@ -105,18 +105,7 @@
   --color-text-muted: #323232; /* Subdued text for secondary content */
   --color-text-hover: white; /* White for hover states */
   --color-accent-hover: #cdbfb2; /* Lighter indigo for hover states */
-}
 
-:root[data-theme="dark"] {
-  --color-bg: #1a1a1a;
-  --color-bg-alt: #2d2d2d;
-  --color-bg-alt-2: #6c21a0;
-  --color-text: #0bc9cd;
-  --color-text-muted: #adb5bd;
-  --color-accent-hover: #ad84c9;
-}
-/*HAY QUE PONER ROOT PARA QUE SE APLIQUE EL TEMA DARK EN TODOS LOS SITIOS*/
-:root {
   /*
 	 * ANIMATION TOKENS
 	 *
