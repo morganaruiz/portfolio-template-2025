@@ -235,6 +235,7 @@ Recursos externos:
 
 - Imágenes:
   Todas las ilustraciones del sitio web han sido dibujadas y diseñadas por mí.
+  Los gifs de los pequeños gatos en el carrusel de la sección de About me pertenecen al sitio web https://pixelsafari.neocities.org/favicon/
   El gif que se ha empleado en la página de Error 404 pertenece al sitio web https://tenor.com/es/view/john-travolta-gif-12608206659263100219
 
 - Íconos:
