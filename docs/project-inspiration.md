@@ -2,15 +2,15 @@
 
 ## Trends
 
-- [Trend 1]
-- [Trend 2]
-- [Trend 3]
+- Neumorphism
+- Glasmorphism
+- Minimalismo
 
 ## Visual References
 
-- [Link or moodboard image 1]
-- [Link or moodboard image 2]
-- [Link or moodboard image 3]
+- https://es.pinterest.com/pin/897905244468653201/
+- https://es.pinterest.com/pin/897905244468653474/
+- https://es.pinterest.com/pin/3799980930946556/
 
 ## Theme Draft
 
