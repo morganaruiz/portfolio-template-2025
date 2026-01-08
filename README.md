@@ -227,6 +227,12 @@ Página de error personalizada para GitHub Pages.
 
 - Ajustes de contenido.
 
+## Difucultades que he tenido
+
+El principal problema que he tenido ha sido con el carrusel de la sección de About me. He probado de varias maneras a solucionar el problema: cuando termina la última tarjeta del carrusel, no aparecen más tarjetas detrás de esa y el carrusel empieza de nuevo, no es que la primera tarjeta aparezca detrás de la última, es que es como si se resetease... He probado a duplicar el carrusel, a modificar el CSS, a modificar el main.js, pero no he conseguido solucionarlo. Por muchos cambios que hiciera, el problema seguía. Y al final decidí que, aunque el carrusel tuviera ese fallo, lo dejaría así antes de romper el código.
+
+Otro problema que tuve fue con el tamaño de las imágenes de los backgrounds. Ya que cuando hacia el viewport más pequeño, las imágenes seguía con el tamaño del viewport más grande y al situarse detrás del texto, que ahora era más pequeño, no se leía bien. Pero al final entendí como funcionaba el bg size y ya pude resolver el problema en gran medida.
+
 ## Créditos y agradecimientos
 
 Al profesor: Gracias por la guía, feedback y apoyo durante el desarrollo del proyecto :D

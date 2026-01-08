@@ -194,7 +194,10 @@
   flex: 0 0 240px;
   border-radius: 12px;
   text-align: center;
-  margin: 2rem auto;
+  /* Avoid auto horizontal margins inside a horizontal flex track
+     which create a visible gap when the track is duplicated for
+     continuous scrolling. Use vertical spacing only. */
+  margin: 2rem 0;
   box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
   background: var(--color-bg);
   display: flex;
